@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar text-center color="black">
+    
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!--
+  <h2>Welcome to login page</h2>
+  {{ email }}
+  <ion-input [(ngModel)]="email"></ion-input>
+  <button ion-button (click)="pressMe(email, 50)">Button</button>
+  -->
+
+  <div class="content">
+
+    <h1 text-center>
+      Log In
+    </h1>
+
+
+    <ion-item inset color="black">
+      <ion-label floating>Email</ion-label>
+      <ion-input [(ngModel)]="email" type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item inset color="black">
+      <ion-label floating>Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+
+
+
+    <div padding>
+      <button color="secondary" ion-button block (click)="login()">Log In</button>
+    </div>
+
+    <div padding class="content">
+      <ion-item color="black" no-lines text-center (click)="navigateToRegistration()">
+        Don't have an account yet?
+      </ion-item>
+      <!-- <button ion-button block (click)="navigateToRegistration()">Register</button> -->
+
+    </div>
+  </div>
+
+  <!-- 
+  going to let us use each one
+  <div *ngFor="let name of names">
+    {{name}}
+  </div>
+  -->
+
+  <!--
+  <div *ngIf=”flag == true”>  Render this </div>
+  -->
+
+</ion-content>
+
+<!--
+  boundaries
+  timer
+  track player (m)
+-->

@@ -1,0 +1,133 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title text-center>Edit Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+  <!-- <ion-list no-lines>
+    <ion-item>
+      <img id="profile-photo" src="../../assets/imgs/logo.png" alt="Profile Photo">
+    </ion-item>
+    <ion-item>
+      <p text-center>
+        <a href="">Change Profile Photo</a>
+      </p>
+    </ion-item>
+  </ion-list> -->
+
+  <div>
+
+    <ion-list>
+      <ion-item class="content">
+        <ion-label fixed>First Name</ion-label>
+        <ion-input [(ngModel)]="firstName" type="text" placeholder={{firstName}}></ion-input>
+      </ion-item>
+      <ion-item class="content">
+        <ion-label fixed>Last Name</ion-label>
+        <ion-input [(ngModel)]="lastName" type="text" placeholder={{lastName}}></ion-input>
+      </ion-item>
+      <ion-item class="content">
+        <ion-label fixed>Email</ion-label>
+        <ion-input [(ngModel)]="email" type="text" placeholder={{email}}></ion-input>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-row>
+        <button ion-button color="secondary" block>Update Password</button>
+        <button ion-button color="secondary" block (click)="navigateToHomeSetRoot()">Log Out</button>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button block color="secondary" (click)="navigateBack()">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button icon-only block color="danger">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+  <!--
+  <ion-card text-center block>
+    <img id="profile-photo" src="../../assets/imgs/21951053_1645652028902475_1236221758443723820_o.jpg" alt="Profile Photo">
+    <ion-card-content >
+      <a href="#">Change Profile Photo</a>
+    </ion-card-content>
+  </ion-card>
+  -->
+
+
+  <!--
+  <ion-grid>
+    <ion-row>
+      <ion-col col-9>
+        <figure>
+          <img src="../../assets/imgs/logo.png">
+          <figcaption>
+            The figure caption.
+          </figcaption>
+        </figure>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <ion-item>
+      <h1>Roxanne Harris</h1>
+      <p>Other information</p>
+    </ion-item>
+    <ion-card-content>
+      <p>
+        More information.
+      </p>
+    </ion-card-content>
+  </ion-card>
+  -->
+
+  <!-- 
+  Ask about visually popping and "correctness" of technique
+  <div padding>
+    <button ion-button block (click)="navigateToHomePop()">Log Out (Pop)</button>
+  </div>
+
+  Ask about pushing rather than popping and ability to go back
+  <div padding>
+    <button ion-button block color="secondary" (click)="navigateToHomePush()">Log Out (Push)</button>
+  </div>
+
+  Ask about setRoot
+  -->
+  <!--
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Activity Log</a>
+        </li>
+        <li>
+          <a href="#">Newsfeed </a>
+        </li>
+        <li>
+          <a href="#">Settings</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  -->
+
+
+
+
+</ion-content>
+
+-->

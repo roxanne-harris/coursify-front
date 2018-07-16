@@ -1,0 +1,70 @@
+page-profile {
+
+    /*
+    nav {
+        background-color: #f0f0f0;
+    }
+    
+
+    
+    nav ul {
+        //padding: 0;
+        //margin: 0;
+        display: flex;
+        justify-content: space-around;
+    
+    }
+    
+    
+    nav ul li{
+        //list-style-type: none;
+        //padding-left: 0;
+        //margin-left: 0;
+        display: inline-flex;
+        padding: 10px;
+    }
+    
+    nav a {
+        text-decoration: none;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    */
+
+    a {
+        text-decoration: none;
+        display: inline-flex;
+    }
+
+    #profile-photo {
+        border-radius: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        height: 100px;
+    }
+
+    
+    .content {
+        background-color: color($colors, black);
+        color: color($colors, light);
+        //text-decoration-color: color($colors, light);
+    }
+
+
+    ion-item {
+        .content {
+            background-color: color($colors, black);
+            color: color($colors, light);
+            //text-decoration-color: color($colors, light);
+        }
+    }
+
+    ion-item ion-list div {
+        background-color: color($colors, black);
+        color: color($colors, light);
+    }
+
+}

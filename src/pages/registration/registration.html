@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="black">
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--
+  <h2>Welcome to registration page</h2>
+  -->
+  <div class="content">
+
+    <h1 text-center>
+      Register
+    </h1>
+
+
+    <ion-list color="black">
+      <ion-item color="black">
+        <ion-label floating>First Name</ion-label>
+        <ion-input [(ngModel)]="firstName" type="text"></ion-input>
+      </ion-item>
+      <ion-item color="black">
+        <ion-label floating>Last Name</ion-label>
+        <ion-input [(ngModel)]="lastName" type="text"></ion-input>
+      </ion-item>
+      <ion-item color="black">
+        <ion-label floating>Email</ion-label>
+        <ion-input [(ngModel)]="email" type="text"></ion-input>
+      </ion-item>
+      <ion-item color="black">
+        <ion-label floating>Password</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+      <ion-item color="black">
+        <ion-label floating>Confirm Password</ion-label>
+        <ion-input [(ngModel)]="confirmPassword" type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+
+    <div padding>
+      <button ion-button color="secondary" block (click)="register()">Register</button>
+    </div>
+
+    <div padding>
+      <ion-item no-lines color="black" text-center (click)="navigateToLogin()">
+        Already have an account?
+      </ion-item>
+      <!-- <button ion-button block (click)="navigateToRegistration()">Register</button> -->
+
+    </div>
+  </div>
+
+
+
+</ion-content>

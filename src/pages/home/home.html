@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="black">
+    <ion-buttons left>
+      <button ion-button icon-only color="secondary">
+        <ion-icon name="book"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button ion-button icon-only>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="content">
+
+    <div style="text-align:center">
+      <img src="../../assets/imgs/coursifylogo.PNG">
+      <div padding>
+        <div>
+          Any successful career starts
+        </div>
+        <div>
+          with good education
+        </div>
+      </div>
+    </div>
+
+    <div padding style="text-align:center">
+      <div padding>
+          <button style="width: 200px; text-transform: none" ion-button color="secondary" (click)="navigateToLogin()">Log In</button>
+      </div>
+      <div>
+          <button style="width: 200px; text-transform: none" ion-button color="secondary" (click)="navigateToRegistration()">Sign Up</button>
+      </div>
+      
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,14 @@
+page-home {
+    .content {
+        background-color: color($colors, black);
+        color: color($colors, light);
+        //text-decoration-color: color($colors, light);
+    }
+
+    img {
+        width: 250px;
+        height: 180px;
+    }
+
+    
+}
