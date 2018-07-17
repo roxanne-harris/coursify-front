@@ -45,5 +45,11 @@
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
+  <script src="https://js.stripe.com/v3/"></script>
+  <script type="text/javascript">
+    var stripe = Stripe('pk_test_4LcrCJ8ztPOCW5QX8AkRPa98'); // use your test publishable key
+    var elements = stripe.elements();
+  </script>
+
 </body>
 </html>

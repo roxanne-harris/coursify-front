@@ -18,48 +18,23 @@ export class CourseService {
     }
 
     getListOfCourses(callback: Function) {
-        // const headers: Headers = new Headers()
-        // headers.append("accept","/*")
-
-        // const options = new RequestOptions({headers: headers})
-        // return this.listOfCourses;
 
         this.http.get("http://localhost:3000/courses")
             .subscribe(
                 result => {
-                    this.listOfCourses = result.json();
-                    // console.log(result);
-                    // console.log(result.json)
-                    // console.log(result.json());
-
                     callback(null, result.json());
-
-                    // this.listOfCourses = result.json();
-                    // return this.listOfCourses;
-
                 },
 
                 err => {
                     console.log("Err: ", err);
                     callback(err, null);
-                    // return this.listOfCourses;
+                 
                 }
             )
-
-        // console.log(this.listOfCourses);
 
     }
 
     addCourseToService(course: Course) {
-        // console.log(this.http.get("http://localhost:3000/courses").toPromise);
-        // this.http.post(
-        //     "http://localhost:3000/addCourse",
-        //     {
-        //         course: course
-        //     }
-        // )
-
-        // console.log(course);
 
         this.http.post("http://localhost:3000/course/add", {
             subject: course.subject,
@@ -70,16 +45,13 @@ export class CourseService {
         })
             .subscribe(
                 result => {
-                    // console.log(result.json());
-                    //this.listOfCourses.push(course);
+                    console.log(result.json());
                 },
 
                 err => {
                     console.log(err);
                 }
             )
-        this.listOfCourses.push(course);
-
     }
 
     getCoursesByUniversity(
@@ -139,5 +111,27 @@ export class CourseService {
 
         )
     }
+
+    addCourseProfessorPair(
+        course_id: number,
+        professor_id: number
+    ) {
+        let url = "http://localhost:3000/course_professor";
+
+        this.http.post(url, {
+            course_id: course_id,
+            professor_id: professor_id
+        })
+            .subscribe(
+                result => {
+                    console.log(result.json())
+                },
+                err => {
+                    console.log(err);
+                }
+            )
+    }
+
+
 
 }

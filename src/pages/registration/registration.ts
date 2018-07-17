@@ -4,6 +4,7 @@ import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
 import { Http } from '@angular/http';
 import { Student } from '../../models/student';
+import { PaymentPage } from '../payment/payment';
 
 
 @Component({
@@ -82,7 +83,8 @@ export class RegistrationPage {
   }
 
   navigateToLogin() {
-    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.push(PaymentPage);
+    //this.navCtrl.setRoot(LoginPage);
   }
 
 }

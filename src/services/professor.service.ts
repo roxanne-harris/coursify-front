@@ -1,17 +1,14 @@
-import { Professor } from "../models/professor";
 import { Http } from "@angular/http";
 import { Injectable } from "@angular/core";
-import { University } from "../models/university";
+
 
 @Injectable()
 export class ProfessorService {
 
-    // private listOfProfessors: Professor[];
-
     constructor(
         public http: Http
     ) {
-        // this.listOfProfessors = [];
+        
     }
 
     getListOfProfessors(callback: Function) {

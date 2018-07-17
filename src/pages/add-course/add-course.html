@@ -37,36 +37,54 @@
             <ion-input [(ngModel)]="universityName" type="text" value=""></ion-input>
         </ion-item>
 
-        <!-- How to add several instructors!!! -->
-        <ion-item>
-            <ion-label stacked>Instructor</ion-label>
-            <ion-input [(ngModel)]="universityName" type="text" value=""></ion-input>
-        </ion-item>
-        <!-- <ion-item>
-            <ion-label stacked>Instructor</ion-label>
-            <ion-input [(ngModel)]="instructor" type="text" value=""></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label stacked>Topics</ion-label>
-            <ion-input [(ngModel)]="topics" type="text" value=""></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label stacked>Recommendation</ion-label>
-            <ion-input [(ngModel)]="recommendation" type="text" value=""></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label stacked>Resources</ion-label>
-            <ion-input [(ngModel)]="resources" type="text" value=""></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label stacked>KeyWords</ion-label>
-            <ion-input [(ngModel)]="keywords" type="text" value=""></ion-input>
-        </ion-item>
-    -->
-        <button ion-item (click)="addCourseToList()">
+    </ion-list>
+
+    <form>
+        <ion-list>
+            <ion-item>
+                <ion-label stacked>Instructor</ion-label>
+                <ion-input type="text" [(ngModel)]="instructor" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+        </ion-list>
+
+
+        <button ion-button color="light" block icon-right (click)="addInstructor()">
+            Add Instructor
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </form>
+
+    <form>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label stacked>FirstName</ion-label>
+                    <ion-input type="text" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label stacked>LastName</ion-label>
+                    <ion-input type="text" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+
+        <button ion-button color="light" block icon-right (click)="addProfessor()">
+            Add Professor
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </form>
+
+    <div>
+        <button ion-button color="secondary" block (click)="addCourseToList()">
             Add Course
         </button>
-    </ion-list>
+    </div>
+
+
+
 
 
 

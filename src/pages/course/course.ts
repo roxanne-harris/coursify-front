@@ -18,6 +18,7 @@ import { ReviewsPage } from '../reviews/reviews';
 export class CoursePage {
 
   public course: Course;
+ 
 
   constructor(
     public navCtrl: NavController, 

@@ -3,7 +3,10 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule, MenuController } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { HttpModule } from "@angular/http"
+import { HttpModule } from "@angular/http";
+import { FormsModule } from '@angular/forms';
+
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CourseListPage } from '../pages/course-list/course-list';
@@ -21,6 +24,7 @@ import { UniversityPage } from '../pages/university/university';
 import { ProfessorService } from '../services/professor.service';
 import { AddReviewPage } from '../pages/add-review/add-review';
 import { ReviewsPage } from '../pages/reviews/reviews';
+import { PaymentPage } from '../pages/payment/payment';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,8 @@ import { ReviewsPage } from '../pages/reviews/reviews';
     UniversitiesPage,
     UniversityPage,
     AddReviewPage,
-    ReviewsPage
+    ReviewsPage,
+    PaymentPage
     
   ],
   imports: [
@@ -55,6 +60,7 @@ import { ReviewsPage } from '../pages/reviews/reviews';
       ]
     }),
     HttpModule,
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -71,7 +77,8 @@ import { ReviewsPage } from '../pages/reviews/reviews';
     UniversitiesPage,
     UniversityPage,
     AddReviewPage,
-    ReviewsPage
+    ReviewsPage,
+    PaymentPage
   ],
   providers: [
     StatusBar,
