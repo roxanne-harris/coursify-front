@@ -27,8 +27,8 @@ export class ProfessorPage {
   ) {
 
     this.professor = this.navParams.get("professorParameter");
-
-    this.courseService.getCourseProfessors(
+    console.log(this.professor);
+    this.courseService.getCourseProfessors2(
       this.professor.professor_id,
       (err, result) => {
         if(err) {
@@ -57,7 +57,7 @@ export class ProfessorPage {
       
   }
 
-  getProfessors() {
+  getCourses() {
     console.log(this.courses);
     this.courses.forEach(value => {
       this.viewCourses(value.course_id);

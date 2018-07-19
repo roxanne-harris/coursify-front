@@ -18,18 +18,24 @@
   <ion-card>
     <ion-card-header>
       {{ professor.first_name }} {{ professor.last_name }}
-      </ion-card-header>
-      <ion-card-content>
-        <ion-list>
-          <ion-list-header color="secondary">
-            Courses
-          </ion-list-header>
-          <button ion-item>
-            Empty
-          </button>
-        </ion-list>
-      </ion-card-content>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-list-header color="secondary">
+          Courses
+        </ion-list-header>
+
+        <button ion-item *ngFor="let course of listOfCourses">
+          {{ course.subject }} {{ course.number }}: {{ course.title }}
+        </button>
+
+      </ion-list>
+    </ion-card-content>
   </ion-card>
+
+  <button ion-button color="light" block (click)="getCourses()">
+    View Courses
+  </button>
 
 
 </ion-content>

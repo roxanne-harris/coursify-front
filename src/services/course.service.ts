@@ -36,6 +36,24 @@ export class CourseService {
 
     }
 
+    getCourseProfessors2(professor_id: number, callback: Function) {
+        let url = "http://localhost:3000/courseprofessors2/?professor_id=" + professor_id;
+
+        this.http.get(url)
+            .subscribe(
+                result => {
+                    callback(null, result.json());
+                },
+
+                err => {
+                    console.log("Err: ", err);
+                    callback(err, null);
+                 
+                }
+            )
+
+    }
+
     getListOfCourses(callback: Function) {
 
         this.http.get("http://localhost:3000/courses")

@@ -11,6 +11,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { NgForm } from '@angular/forms';
 import { LoginPage } from '../login/login';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'page-payment',
@@ -27,7 +28,8 @@ export class PaymentPage implements AfterViewInit, OnDestroy
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    public http: Http
   ) {}
 
   ngAfterViewInit() {
@@ -60,6 +62,21 @@ export class PaymentPage implements AfterViewInit, OnDestroy
       console.log('Success!', token);
       // ...send the token to the your backend to process the charge
     }
+
+    let tok = token.id;
+
+    let url = "http://localhost:3000/payment/?token=" + tok;
+    this.http.post(url, {
+     // use jwt token to resolve student identity
+    })
+    .subscribe(
+      result => {
+        
+      },
+      err => {
+
+      }
+    )
 
     this.navCtrl.setRoot(LoginPage);
   }
