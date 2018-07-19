@@ -50,6 +50,9 @@
   <ion-nav id="nav" #content [root]="rootPage"></ion-nav> -->
   <div class="content">
     <ion-list>
+      <ion-list-header color="secondary">
+        Courses
+      </ion-list-header>
       <button class="content" ion-item *ngFor="let course of listOfCourses" (click)="navigateToCourse(course)">
         {{ course.subject }} {{ course.number }}: {{ course.title }}
       </button>

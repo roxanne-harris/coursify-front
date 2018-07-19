@@ -25,6 +25,8 @@ import { ProfessorService } from '../services/professor.service';
 import { AddReviewPage } from '../pages/add-review/add-review';
 import { ReviewsPage } from '../pages/reviews/reviews';
 import { PaymentPage } from '../pages/payment/payment';
+import { ProfessorsPage } from '../pages/professors/professors';
+import { ProfessorPage } from '../pages/professor/professor';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { PaymentPage } from '../pages/payment/payment';
     UniversityPage,
     AddReviewPage,
     ReviewsPage,
-    PaymentPage
+    PaymentPage,
+    ProfessorsPage,
+    ProfessorPage
     
   ],
   imports: [
@@ -56,7 +60,6 @@ import { PaymentPage } from '../pages/payment/payment';
         { component: RegistrationPage, name: 'Register', segment: 'register'},
         { component: LandingPage, name: 'Landing', segment: 'landing'},
         { component: UniversitiesPage, name: 'Universities', segment: 'universities'},
-        { component: UniversityPage, name: 'University', segment: 'university'}
       ]
     }),
     HttpModule,
@@ -78,7 +81,9 @@ import { PaymentPage } from '../pages/payment/payment';
     UniversityPage,
     AddReviewPage,
     ReviewsPage,
-    PaymentPage
+    PaymentPage,
+    ProfessorsPage,
+    ProfessorPage
   ],
   providers: [
     StatusBar,

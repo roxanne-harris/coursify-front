@@ -10,12 +10,14 @@ import {
 import { NavController, NavParams } from 'ionic-angular';
 
 import { NgForm } from '@angular/forms';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-payment',
   templateUrl: 'payment.html',
 })
-export class PaymentPage implements AfterViewInit, OnDestroy {
+export class PaymentPage implements AfterViewInit, OnDestroy 
+{
   @ViewChild('cardInfo') cardInfo: ElementRef;
 
   card: any;
@@ -58,6 +60,8 @@ export class PaymentPage implements AfterViewInit, OnDestroy {
       console.log('Success!', token);
       // ...send the token to the your backend to process the charge
     }
+
+    this.navCtrl.setRoot(LoginPage);
   }
 
   ionViewDidLoad() {

@@ -17,13 +17,19 @@
   <div class="content">
     <!-- {{ university.name }} -->
     <ion-list>
-      <button ion-item *ngFor="let professor of professors">
+      <ion-list-header color="secondary">
+        Professors
+      </ion-list-header>
+      <button ion-item class="content" *ngFor="let professor of professors">
         {{ professor.last_name }}, {{ professor.first_name }}
       </button>
     </ion-list>
 
     <ion-list>
-        <button ion-item *ngFor="let course of courses">
+      <ion-list-header color="secondary">
+        Courses
+      </ion-list-header>
+        <button ion-item class="content" *ngFor="let course of courses">
           {{ course.subject }} {{ course.number }}
         </button>
       </ion-list>

@@ -39,22 +39,9 @@
 
     </ion-list>
 
-    <form>
-        <ion-list>
-            <ion-item>
-                <ion-label stacked>Instructor</ion-label>
-                <ion-input type="text" [(ngModel)]="instructor" [ngModelOptions]="{standalone: true}"></ion-input>
-            </ion-item>
-        </ion-list>
+    
 
-
-        <button ion-button color="light" block icon-right (click)="addInstructor()">
-            Add Instructor
-            <ion-icon name="add"></ion-icon>
-        </button>
-    </form>
-
-    <form>
+    <form padding >
         <ion-row>
             <ion-col>
                 <ion-item>
@@ -77,9 +64,18 @@
         </button>
     </form>
 
-    <div>
-        <button ion-button color="secondary" block (click)="addCourseToList()">
+    <div padding>
+        <button ion-button color="light" block  icon-right (click)="addCourseToList()">
             Add Course
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </div>
+
+    
+
+    <div>
+        <button ion-button color="secondary" block (click)="addCourseProfessorPair()">
+            Done
         </button>
     </div>
 

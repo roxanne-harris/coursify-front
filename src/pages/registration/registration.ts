@@ -62,7 +62,7 @@ export class RegistrationPage {
           let t = localStorage.getItem("TOKEN");
 
           if (t != null) {
-              this.navigateToLogin();
+              this.navigateToPayment();
           }
         },
 
@@ -83,8 +83,12 @@ export class RegistrationPage {
   }
 
   navigateToLogin() {
+    
+    this.navCtrl.setRoot(LoginPage);
+  }
+
+  navigateToPayment() {
     this.navCtrl.push(PaymentPage);
-    //this.navCtrl.setRoot(LoginPage);
   }
 
 }

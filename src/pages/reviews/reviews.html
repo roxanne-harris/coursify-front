@@ -16,11 +16,30 @@
 <ion-content padding>
 
     <div class="content">
-        <ion-list>
-          <button class="content" ion-item *ngFor="let review of listOfReviews" (click)="navigateToCourse(course)">
+      <ion-card class="content"  *ngFor="let review of listOfReviews">
+        <ion-card-header color="secondary">
+          {{ review.header }}
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row>
+            <ion-col>
+                {{ review.remark }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+                {{ review.rating }}
+            </ion-col>
+          </ion-row>
+
+          
+        </ion-card-content>
+      </ion-card>
+        <!-- <ion-list>
+          <button class="content" ion-item *ngFor="let review of listOfReviews">
               {{ review.header }}
           </button>
-        </ion-list>
+        </ion-list> -->
       </div>
 
 </ion-content>

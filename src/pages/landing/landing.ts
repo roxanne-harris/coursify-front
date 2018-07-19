@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UniversitiesPage } from '../universities/universities';
 import { CourseListPage } from '../course-list/course-list';
 import { ProfilePage } from '../profile/profile';
+import { ProfessorsPage } from '../professors/professors';
 
 /**
  * Generated class for the LandingPage page.
@@ -37,6 +38,10 @@ export class LandingPage {
 
   navigateToProfile() {
     this.navCtrl.push(ProfilePage);
+  }
+
+  navigateToProfessors() {
+    this.navCtrl.push(ProfessorsPage);
   }
 
 }

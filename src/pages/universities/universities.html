@@ -16,6 +16,9 @@
 <ion-content padding>
   <div class="content">
   <ion-list>
+      <ion-list-header color="secondary">
+          Universities
+        </ion-list-header>
     <button class="content" ion-item *ngFor="let university of listOfUniversities" (click)="navigateToUniversity(university)">
       {{ university.name }}
     </button>

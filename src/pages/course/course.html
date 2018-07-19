@@ -15,11 +15,29 @@
 
 <ion-content padding>
 
-  <button ion-button (click)="navigateToAddReview()">
+  <ion-card>
+    <ion-card-header>
+      {{ course.subject }} {{ course.number }}: {{ course.title }}
+    </ion-card-header>
+    <ion-card-content>
+      {{ course.description }}
+    </ion-card-content>
+    <ion-list>
+      <button ion-item *ngFor="let professor of listOfProfessors">
+        {{ professor.last_name }}, {{ professor.first_name }}
+      </button>
+    </ion-list>
+  </ion-card>
+
+  <button ion-button color="light" block (click)="getProfessors()">
+    View Professors
+  </button>
+
+  <button ion-button color="light" block (click)="navigateToAddReview()">
     Add Review
   </button>
 
-  <button ion-button (click)="navigateToReviews()">
+  <button ion-button color="light" block (click)="navigateToReviews()">
     View Reviews
   </button>
 
